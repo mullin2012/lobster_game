@@ -132,7 +132,12 @@ lobster_game/
 
 ## 📄 许可证
 
-MIT License
+- **源代码**: [CC BY-NC-SA 4.0](LICENSE) - 非商业性使用
+- **游戏本体**: 专有商业软件（需购买）
+
+© 2026 Lobster Team. All Rights Reserved.
+
+**详细说明**: 源代码仅供学习和研究使用，禁止商业用途。游戏编译版本将在 Steam/itch.io 平台收费发布。
 
 ## 📧 联系方式
 
