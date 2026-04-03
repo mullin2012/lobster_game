@@ -174,6 +174,13 @@ class GameGUI:
                 for button in self.buttons:
                     if button.handle_event(event):
                         return
+            
+            elif self.current_state == "game":
+                # 返回按钮点击检测
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    back_button = pygame.Rect(SCREEN_WIDTH // 2 - 75, 400, 150, 40)
+                    if back_button.collidepoint(event.pos):
+                        self.current_state = "menu"
     
     def draw_menu(self):
         """绘制主菜单"""
@@ -202,22 +209,23 @@ class GameGUI:
         """绘制游戏主界面"""
         self.screen.blit(self.background, (0, 0))
         
-        # 游戏界面占位
-        info_text = FONT_MEDIUM.render("游戏进行中...", True, COLORS["WHITE"])
-        text_rect = info_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
+        # 显示提示信息
+        info_text = FONT_MEDIUM.render("游戏功能请使用命令行版", True, COLORS["WHITE"])
+        text_rect = info_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 50))
         self.screen.blit(info_text, text_rect)
         
-        # 返回按钮
-        back_button = Button(50, 500, 150, 40, "返回菜单", 
-                            lambda: setattr(self, 'current_state', 'menu'),
-                            COLORS["RED"])
-        back_button.draw(self.screen)
+        hint_text = FONT_SMALL.render("运行: python main.py", True, COLORS["LIGHT_GRAY"])
+        hint_rect = hint_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
+        self.screen.blit(hint_text, hint_rect)
         
-        # 简单的返回按钮事件处理
-        for event in pygame.event.get():
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                if back_button.rect.collidepoint(event.pos):
-                    back_button.callback()
+        # 返回按钮
+        back_button = pygame.Rect(SCREEN_WIDTH // 2 - 75, 400, 150, 40)
+        pygame.draw.rect(self.screen, COLORS["RED"], back_button, border_radius=8)
+        pygame.draw.rect(self.screen, COLORS["WHITE"], back_button, width=2, border_radius=8)
+        
+        back_text = FONT_SMALL.render("返回菜单", True, COLORS["WHITE"])
+        back_text_rect = back_text.get_rect(center=back_button.center)
+        self.screen.blit(back_text, back_text_rect)
     
     def draw(self):
         """绘制当前状态"""
@@ -241,12 +249,38 @@ class GameGUI:
 
 # 初始化字体
 def init_fonts():
-    """初始化字体"""
+    """初始化字体 - 使用系统中文字体"""
     global FONT_LARGE, FONT_MEDIUM, FONT_SMALL
+    
+    # 尝试使用系统中文字体
+    chinese_fonts = ['simhei', 'microsoftyahei', 'simsun', 'fangsong', 'kaiti', 'Arial Unicode MS']
+    
+    font_name = None
+    for name in chinese_fonts:
+        try:
+            test_font = pygame.font.SysFont(name, 24)
+            if test_font:
+                font_name = name
+                break
+        except:
+            continue
+    
+    if font_name:
+        try:
+            FONT_LARGE = pygame.font.SysFont(font_name, 72)
+            FONT_MEDIUM = pygame.font.SysFont(font_name, 48)
+            FONT_SMALL = pygame.font.SysFont(font_name, 24)
+            print(f"[GUI] 使用字体: {font_name}")
+            return
+        except:
+            pass
+    
+    # 回退方案：使用默认字体
     try:
         FONT_LARGE = pygame.font.Font(None, 72)
         FONT_MEDIUM = pygame.font.Font(None, 48)
         FONT_SMALL = pygame.font.Font(None, 24)
+        print("[GUI] 使用默认字体")
     except:
         FONT_LARGE = pygame.font.SysFont('arial', 72)
         FONT_MEDIUM = pygame.font.SysFont('arial', 48)

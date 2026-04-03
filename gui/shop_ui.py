@@ -86,13 +86,6 @@ W2 = 22  # 副框宽度（半宽）
 # ═══════════════════════════════════════════════════════════════
 #  ║  内部辅助函数                                                ║
 # ═══════════════════════════════════════════════════════════════
-def _line(t=B, lft="", content="", rgt="", box=None) -> str:
-    """生成一行：左元素 + 内容 + 右元素，自动填满宽度"""
-    b = box or BOX_THIN
-    pad = W - len(lft) - len(rft) - 4
-    inner = content.center(pad) if content else " " * pad
-    return f"{b['l']} {lft}{inner}{rgt} "
-
 
 def _header_row(title: str, box=None) -> list[str]:
     """生成标题行（双线框）"""

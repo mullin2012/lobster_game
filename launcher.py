@@ -16,7 +16,7 @@ def check_pygame():
 def run_cli():
     """运行命令行版"""
     print("\n" + "="*50)
-    print("  🦞 龙虾大冒险 - 命令行版 🦞")
+    print("  [LOBSTER] 龙虾大冒险 - 命令行版 [LOBSTER]")
     print("="*50 + "\n")
     
     # 导入并运行主游戏
@@ -29,11 +29,11 @@ def run_cli():
 def run_gui():
     """运行 GUI 版"""
     print("\n" + "="*50)
-    print("  🦞 龙虾大冒险 - GUI 版 🦞")
+    print("  [LOBSTER] 龙虾大冒险 - GUI 版 [LOBSTER]")
     print("="*50 + "\n")
     
     if not check_pygame():
-        print("❌ Pygame 未安装！")
+        print("[ERROR] Pygame 未安装！")
         print("\n请先安装 Pygame:")
         print("  pip install pygame")
         print("\n或者运行命令行版 (无需安装):")
@@ -44,7 +44,7 @@ def run_gui():
     assets_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 
                                "game_assets", "sprites")
     if not os.path.exists(assets_path) or not os.listdir(assets_path):
-        print("⚠️  素材文件缺失，正在生成...")
+        print("[INFO] 素材文件缺失，正在生成...")
         from game_assets.generate_sprites import generate_all_sprites
         import pygame
         pygame.init()
@@ -58,7 +58,7 @@ def run_gui():
 def show_menu():
     """显示启动菜单"""
     print("\n" + "="*50)
-    print("  🦞 龙虾大冒险 启动器 🦞")
+    print("  [LOBSTER] 龙虾大冒险 启动器 [LOBSTER]")
     print("="*50)
     print("\n请选择运行模式:\n")
     print("  [1] 命令行版 (经典终端界面)")
@@ -82,7 +82,7 @@ def show_menu():
             print("\n安装完成！请重新启动启动器。")
             break
         elif choice == "0":
-            print("\n再见！🦐")
+            print("\n再见！")
             break
         else:
             print("无效选项，请重试。")
