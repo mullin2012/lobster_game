@@ -9,6 +9,7 @@ from contracts.types import Stats, MonsterTemplate, ItemTemplate, Rarity, Damage
 from modules.battle_system import BattleSystem
 from modules.monster_system import MonsterSystem
 from modules.inventory_system import InventorySystem
+from modules.scene_system import SceneSystem
 
 
 # ============ 技能系统 ============
@@ -193,7 +194,6 @@ class SaveSystem:
         except Exception as e:
             print(f"[ERROR] 加载失败: {e}")
             return False
-from modules.scene_system import SceneSystem
 
 
 # ============ 怪物模板 ============
