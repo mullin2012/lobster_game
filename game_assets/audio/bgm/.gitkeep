@@ -1,0 +1,23 @@
+# Audio Assets Placeholder Files
+# 这些文件是占位符，用于标识音效系统需要的音频文件
+# 请用实际的音频文件替换它们
+
+# 背景音乐 (BGM)
+# 推荐格式: OGG
+# 建议时长: 1-3分钟循环
+# 文件命名: {name}.ogg
+
+# 战斗音效 (Battle SFX)
+# 推荐格式: WAV
+# 建议时长: 0.5-2秒
+# 文件命名: {name}.wav
+
+# UI音效 (UI SFX)
+# 推荐格式: WAV
+# 建议时长: 0.1-0.5秒
+# 文件命名: {name}.wav
+
+# 环境音效 (Ambient SFX)
+# 推荐格式: WAV 或 OGG
+# 建议时长: 5-30秒
+# 文件命名: {name}.wav

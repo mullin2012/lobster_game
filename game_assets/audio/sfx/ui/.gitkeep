@@ -1,0 +1,14 @@
+# UI Sound Effects
+# Place your UI sound effect files here
+
+# Required files:
+# - click.wav
+# - hover.wav
+# - confirm.wav
+# - cancel.wav
+# - error.wav
+# - success.wav
+# - item_pickup.wav
+# - coin.wav
+# - shop_open.wav
+# - inventory_open.wav

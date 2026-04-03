@@ -1,0 +1,192 @@
+{
+    "enabled": true,
+    "master_volume": 1.0,
+    "bgm_volume": 0.7,
+    "sfx_volume": 0.8,
+    "fade_time_ms": 1000,
+    "description": "龙虾大冒险音效配置文件",
+    "audio_files": {
+        "bgm": {
+            "title_theme": {
+                "description": "标题画面背景音乐",
+                "filename": "title_theme.ogg",
+                "loop": true
+            },
+            "town_peaceful": {
+                "description": "城镇平静背景音乐",
+                "filename": "town_peaceful.ogg",
+                "loop": true
+            },
+            "shop_theme": {
+                "description": "商店背景音乐",
+                "filename": "shop_theme.ogg",
+                "loop": true
+            },
+            "inn_relaxing": {
+                "description": "旅店轻松背景音乐",
+                "filename": "inn_relaxing.ogg",
+                "loop": true
+            },
+            "dungeon_adventure": {
+                "description": "地下城冒险背景音乐",
+                "filename": "dungeon_adventure.ogg",
+                "loop": true
+            },
+            "battle_intense": {
+                "description": "战斗激烈背景音乐",
+                "filename": "battle_intense.ogg",
+                "loop": true
+            },
+            "boss_epic": {
+                "description": "Boss战斗史诗背景音乐",
+                "filename": "boss_epic.ogg",
+                "loop": true
+            },
+            "victory_fanfare": {
+                "description": "胜利号角",
+                "filename": "victory_fanfare.ogg",
+                "loop": false
+            },
+            "game_over_sad": {
+                "description": "游戏结束悲伤音乐",
+                "filename": "game_over_sad.ogg",
+                "loop": false
+            }
+        },
+        "sfx_battle": {
+            "attack_normal": {
+                "description": "普通攻击音效",
+                "filename": "attack_normal.wav"
+            },
+            "attack_critical": {
+                "description": "暴击攻击音效",
+                "filename": "attack_critical.wav"
+            },
+            "attack_magic": {
+                "description": "魔法攻击音效",
+                "filename": "attack_magic.wav"
+            },
+            "attack_fire": {
+                "description": "火焰攻击音效",
+                "filename": "attack_fire.wav"
+            },
+            "attack_ice": {
+                "description": "冰霜攻击音效",
+                "filename": "attack_ice.wav"
+            },
+            "attack_poison": {
+                "description": "毒攻击音效",
+                "filename": "attack_poison.wav"
+            },
+            "hit_normal": {
+                "description": "普通命中音效",
+                "filename": "hit_normal.wav"
+            },
+            "hit_critical": {
+                "description": "暴击命中音效",
+                "filename": "hit_critical.wav"
+            },
+            "dodge": {
+                "description": "闪避音效",
+                "filename": "dodge.wav"
+            },
+            "enemy_death": {
+                "description": "敌人死亡音效",
+                "filename": "enemy_death.wav"
+            },
+            "boss_death": {
+                "description": "Boss死亡音效",
+                "filename": "boss_death.wav"
+            },
+            "victory": {
+                "description": "战斗胜利音效",
+                "filename": "victory.wav"
+            },
+            "defeat": {
+                "description": "战斗失败音效",
+                "filename": "defeat.wav"
+            },
+            "level_up": {
+                "description": "升级音效",
+                "filename": "level_up.wav"
+            }
+        },
+        "sfx_ui": {
+            "click": {
+                "description": "按钮点击音效",
+                "filename": "click.wav"
+            },
+            "hover": {
+                "description": "鼠标悬停音效",
+                "filename": "hover.wav"
+            },
+            "confirm": {
+                "description": "确认音效",
+                "filename": "confirm.wav"
+            },
+            "cancel": {
+                "description": "取消音效",
+                "filename": "cancel.wav"
+            },
+            "error": {
+                "description": "错误提示音效",
+                "filename": "error.wav"
+            },
+            "success": {
+                "description": "成功提示音效",
+                "filename": "success.wav"
+            },
+            "item_pickup": {
+                "description": "物品拾取音效",
+                "filename": "item_pickup.wav"
+            },
+            "coin": {
+                "description": "金币音效",
+                "filename": "coin.wav"
+            },
+            "shop_open": {
+                "description": "商店打开音效",
+                "filename": "shop_open.wav"
+            },
+            "inventory_open": {
+                "description": "背包打开音效",
+                "filename": "inventory_open.wav"
+            }
+        },
+        "sfx_ambient": {
+            "forest": {
+                "description": "森林环境音效",
+                "filename": "forest.wav"
+            },
+            "cave": {
+                "description": "洞穴环境音效",
+                "filename": "cave.wav"
+            },
+            "water": {
+                "description": "水流环境音效",
+                "filename": "water.wav"
+            },
+            "wind": {
+                "description": "风声环境音效",
+                "filename": "wind.wav"
+            }
+        }
+    },
+    "scene_bgm_mapping": {
+        "town": "town_peaceful",
+        "shop": "shop_theme",
+        "inn": "inn_relaxing",
+        "dungeon": "dungeon_adventure",
+        "battle": "battle_intense",
+        "boss": "boss_epic",
+        "victory": "victory_fanfare",
+        "game_over": "game_over_sad",
+        "title": "title_theme"
+    },
+    "notes": [
+        "支持的音频格式: OGG (推荐), WAV, MP3",
+        "背景音乐建议使用 OGG 格式以获得更好的压缩比",
+        "音效建议使用 WAV 格式以获得更快的加载速度",
+        "音量范围: 0.0 (静音) 到 1.0 (最大)"
+    ]
+}

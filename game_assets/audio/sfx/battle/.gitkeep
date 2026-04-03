@@ -1,0 +1,18 @@
+# Battle Sound Effects
+# Place your battle sound effect files here
+
+# Required files:
+# - attack_normal.wav
+# - attack_critical.wav
+# - attack_magic.wav
+# - attack_fire.wav
+# - attack_ice.wav
+# - attack_poison.wav
+# - hit_normal.wav
+# - hit_critical.wav
+# - dodge.wav
+# - enemy_death.wav
+# - boss_death.wav
+# - victory.wav
+# - defeat.wav
+# - level_up.wav
