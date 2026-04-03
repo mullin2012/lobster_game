@@ -128,7 +128,7 @@ lobster_game/
 - **龙虾 1 号**: 战斗系统
 - **龙虾 2 号**: 怪物系统
 - **龙虾 3 号**: 物品栏系统
-- **（你的名字）**: 项目统筹、GUI 开发
+- **Mullin**: 项目统筹、GUI 开发
 
 ## 📄 许可证
 
@@ -141,8 +141,8 @@ lobster_game/
 
 ## 📧 联系方式
 
-- GitHub: https://github.com/你的用户名/lobster_game
-- Email: your-email@example.com
+- GitHub: https://github.com/mullin2012/lobster_game
+- Email: mullin2012@qq.com
 
 ---
 
