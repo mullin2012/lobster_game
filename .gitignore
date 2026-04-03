@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Pygame
+*.pyc
+*.db
+savegame.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 游戏存档
+*.sav
+*.save
+
+# 备份文件
+*.bak
+backup/
+
+# 日志文件
+*.log
